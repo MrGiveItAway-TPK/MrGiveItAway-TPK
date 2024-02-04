@@ -1,4 +1,4 @@
-# 💫 About Me:2
+# 💫 About Me:
 Enthusiastic Software Engineer eager to contribute to team success through hard work, attention to de tail and excellent organizational skills. Clear understanding of Programming and Coding. Motivated to learn, grow and excel in the field of Software Engineering.
 
 
