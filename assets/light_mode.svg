@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" width="985px" height="530px" font-size="16px">
+<style>
+@font-face {src: local('Consolas'), local('Consolas Bold'); font-family: 'ConsolasFallback'; font-display: swap; -webkit-size-adjust: 109%; size-adjust: 109%;}
+.key {fill: #953800;} .value {fill: #0a3069;} .cc {fill: #c2cfde;}
+text, tspan {white-space: pre;}
+</style>
+<rect width="985px" height="530px" fill="#f6f8fa" rx="15"/>
+<text x="15" y="30" fill="#24292f">
+<tspan x="15" y="30">           @%KKK|';|jk</tspan>
+<tspan x="15" y="50">         %KKljii!;!|iijk</tspan>
+<tspan x="15" y="70">       @Mlii|!;:!:;;;!|ik%</tspan>
+<tspan x="15" y="90">      %kjjjii||!!;!;:;:,;j%</tspan>
+<tspan x="15" y="110">     @j;!;!!;;;,,`'.''.   ;M</tspan>
+<tspan x="15" y="130">     l;::,,`,::;;:,,``'.   ;M</tspan>
+<tspan x="15" y="150">    M|;;;;;:::::::,,,``'...`j</tspan>
+<tspan x="15" y="170">    ki!;:::,,```````'''.. .'|M</tspan>
+<tspan x="15" y="190">   @l!;!||i|||!!|ijjjjji!,..:K</tspan>
+<tspan x="15" y="210">   @k;jkkKKKMKl|!jKKKKkllj;',k</tspan>
+<tspan x="15" y="230">   %j;iijllKlk|:..|klKli;;,.,k</tspan>
+<tspan x="15" y="250">   %j;:;|||i|!!:. .:::;,`'..:M</tspan>
+<tspan x="15" y="270">    k!;:::::;|!``' :j;`'''`'|%</tspan>
+<tspan x="15" y="290">    %j:;:::;|!|jiij;!ji;,``:K</tspan>
+<tspan x="15" y="310">     %|;;!!||jM%%%%k||||;,:l%</tspan>
+<tspan x="15" y="330">     @Mi!!|MMKkllllkM%K!!!l%</tspan>
+<tspan x="15" y="350">@@@@@@%Kki|Mjiiiii|!!jKjjlK%MM%%%MM</tspan>
+<tspan x="15" y="370">lkkMKM%%MKkk!|jlkkkj|!jKKKMMi,:::;;</tspan>
+<tspan x="15" y="390">kllklK%%%%%Mj|jlkkkiilKMMKMklji|:``</tspan>
+<tspan x="15" y="410">M%%M%%K%%%%@%MMkKKKKKM%KKMK;lllkMl|</tspan>
+<tspan x="15" y="430">%%@@@@k!@@%%%@%%@@@M%%MM%K,,MjjlkKM</tspan>
+<tspan x="15" y="450">%@@@@%@':K@%%%%%%@%%%%M%K, |Mljlkll</tspan>
+<tspan x="15" y="470">@@@@%%@i .j@%%%%%@@%%%%M;  kKkllkKK</tspan>
+<tspan x="15" y="490">@@%%%%@M.jK%@@%%%%%%M%@@@K,MkKKkkMM</tspan>
+<tspan x="15" y="510">@%%%%%%%|kjilM@@@@@@%@MkkkkKKKKKkkk</tspan>
+</text>
+<text x="390" y="30" fill="#24292f">
+<tspan x="390" y="30">mbanifawaz@erp —————————————————————————————————————————————</tspan>
+<tspan x="390" y="50"><tspan class="cc">. </tspan><tspan class="key">OS</tspan>:<tspan class="cc"> ....................... </tspan><tspan class="value">Ubuntu, Kali, Manjaro, Windows</tspan></tspan>
+<tspan x="390" y="70"><tspan class="cc">. </tspan><tspan class="key">Uptime</tspan>:<tspan class="cc"> ....................... </tspan><tspan class="value">5 years, 3 months, 22 days</tspan></tspan>
+<tspan x="390" y="90"><tspan class="cc">. </tspan><tspan class="key">Host</tspan>:<tspan class="cc"> ................................. </tspan><tspan class="value">Syarah - ERP Squad</tspan></tspan>
+<tspan x="390" y="110"><tspan class="cc">. </tspan><tspan class="key">Kernel</tspan>:<tspan class="cc"> ......... </tspan><tspan class="value">Senior Software Engineer, ERP Squad Lead</tspan></tspan>
+<tspan x="390" y="130"><tspan class="cc">. </tspan><tspan class="key">IDE</tspan>:<tspan class="cc"> .............................. </tspan><tspan class="value">VS Code, Visual Studio</tspan></tspan>
+<tspan x="390" y="150"></tspan>
+<tspan x="390" y="170"><tspan class="cc">. </tspan><tspan class="key">Languages.Programming</tspan>:<tspan class="cc"> ....... </tspan><tspan class="value">Python, PHP, JavaScript, C#</tspan></tspan>
+<tspan x="390" y="190"><tspan class="cc">. </tspan><tspan class="key">Languages.Computer</tspan>:<tspan class="cc"> .......... </tspan><tspan class="value">HTML, CSS, SQL, Jinja, Bash</tspan></tspan>
+<tspan x="390" y="210"><tspan class="cc">. </tspan><tspan class="key">Languages.Real</tspan>:<tspan class="cc"> .................. </tspan><tspan class="value">Arabic, English, German</tspan></tspan>
+<tspan x="390" y="230"></tspan>
+<tspan x="390" y="250"><tspan class="cc">. </tspan><tspan class="key">Frameworks.ERP</tspan>:<tspan class="cc"> .......................... </tspan><tspan class="value">Frappe, ERPNext</tspan></tspan>
+<tspan x="390" y="270"><tspan class="cc">. </tspan><tspan class="key">Frameworks.Backend</tspan>:<tspan class="cc"> ........ </tspan><tspan class="value">Laravel, FastAPI, Flask, .NET</tspan></tspan>
+<tspan x="390" y="290"><tspan class="cc">. </tspan><tspan class="key">Frameworks.Frontend</tspan>:<tspan class="cc"> .............. </tspan><tspan class="value">Vue.js, React, Angular</tspan></tspan>
+<tspan x="390" y="310"><tspan class="cc">. </tspan><tspan class="key">DevOps</tspan>:<tspan class="cc"> ................. </tspan><tspan class="value">Docker, Helm, ArgoCD, AWS, NGINX</tspan></tspan>
+<tspan x="390" y="330"></tspan>
+<tspan x="390" y="350">- Contact ——————————————————————————————————————————————————</tspan>
+<tspan x="390" y="370"><tspan class="cc">. </tspan><tspan class="key">Email</tspan>:<tspan class="cc"> ........................... </tspan><tspan class="value">m.banifawaz@outlook.com</tspan></tspan>
+<tspan x="390" y="390"><tspan class="cc">. </tspan><tspan class="key">LinkedIn</tspan>:<tspan class="cc"> ............................... </tspan><tspan class="value">munes-bani-fawaz</tspan></tspan>
+<tspan x="390" y="410"><tspan class="cc">. </tspan><tspan class="key">YouTube</tspan>:<tspan class="cc"> ................................. </tspan><tspan class="value">@munesbanifawaz</tspan></tspan>
+<tspan x="390" y="430"></tspan>
+<tspan x="390" y="450">- GitHub Stats —————————————————————————————————————————————</tspan>
+<tspan x="390" y="470"><tspan class="cc">. </tspan><tspan class="key">Repos</tspan>:<tspan class="cc"> .. </tspan><tspan class="value">115 {Contrib: 30}</tspan> | <tspan class="cc">. </tspan><tspan class="key">Stars</tspan>:<tspan class="cc"> ................. </tspan><tspan class="value">0</tspan></tspan>
+<tspan x="390" y="490"><tspan class="cc">. </tspan><tspan class="key">Commits</tspan>:<tspan class="cc"> ........... </tspan><tspan class="value">35,561</tspan> | <tspan class="cc">. </tspan><tspan class="key">Followers</tspan>:<tspan class="cc"> ............ </tspan><tspan class="value">16</tspan></tspan>
+<tspan x="390" y="510"><tspan class="cc">. </tspan><tspan class="key">Contributions</tspan>:<tspan class="cc"> ..... </tspan><tspan class="value">34,270</tspan> | <tspan class="cc">. </tspan><tspan class="key">Since</tspan>:<tspan class="cc"> .............. </tspan><tspan class="value">2022</tspan></tspan>
+</text>
+</svg>

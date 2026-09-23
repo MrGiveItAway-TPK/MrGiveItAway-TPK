@@ -6,7 +6,38 @@ on:
   workflow_dispatch:
 
 jobs:
+  profile:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Profile card
+        run: python3 scripts/profile_svg.py
+        env:
+          ACCESS_TOKEN: ${{ secrets.METRICS_TOKEN }}
+          USER_NAME: MrGiveItAway-TPK
+
+      - name: Contribution snake
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: MrGiveItAway-TPK
+          outputs: |
+            assets/snake.svg
+            assets/snake-dark.svg?palette=github-dark
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets
+          git diff --cached --quiet && exit 0
+          git commit -m "Update profile card and snake [skip ci]"
+          git push
+
   metrics:
+    needs: profile
     runs-on: ubuntu-latest
     permissions:
       contents: write
