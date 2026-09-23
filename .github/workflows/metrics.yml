@@ -30,7 +30,7 @@ jobs:
           user: MrGiveItAway-TPK
           base: header, activity, community, repositories
           config_timezone: Asia/Amman
-          repositories_affiliations: owner, collaborator, organization_member
+          repositories_affiliations: owner
           debug: yes
           plugin_languages: yes
           plugin_languages_sections: most-used
