@@ -12,7 +12,7 @@ jobs:
       contents: write
     steps:
       - name: Contribution calendar
-        uses: lowlighter/metrics@latest
+        uses: lowlighter/metrics@master
         with:
           filename: metrics.calendar.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -23,7 +23,7 @@ jobs:
           plugin_isocalendar_duration: full-year
 
       - name: Profile overview
-        uses: lowlighter/metrics@latest
+        uses: lowlighter/metrics@master
         with:
           filename: metrics.general.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -33,10 +33,8 @@ jobs:
           repositories_affiliations: owner, collaborator, organization_member
           plugin_languages: yes
           plugin_languages_sections: most-used
-          plugin_languages_limit: 10
+          plugin_languages_limit: 8
+          plugin_languages_details: percentage
           plugin_notable: yes
           plugin_notable_from: all
           plugin_notable_repositories: yes
-          plugin_achievements: yes
-          plugin_achievements_display: compact
-          plugin_achievements_threshold: B
