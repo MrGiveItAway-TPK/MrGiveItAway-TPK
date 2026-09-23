@@ -12,7 +12,7 @@ jobs:
       contents: write
     steps:
       - name: Contribution calendar
-        uses: lowlighter/metrics@master
+        uses: lowlighter/metrics@366f8b9dfe3a59656c67d5dcad9950f59c9bc96d  # master 2026-09-23; pinned because the token has repo scope
         with:
           filename: metrics.calendar.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -23,7 +23,7 @@ jobs:
           plugin_isocalendar_duration: full-year
 
       - name: Profile overview
-        uses: lowlighter/metrics@master
+        uses: lowlighter/metrics@366f8b9dfe3a59656c67d5dcad9950f59c9bc96d  # master 2026-09-23; pinned because the token has repo scope
         with:
           filename: metrics.general.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -31,6 +31,7 @@ jobs:
           base: header, activity, community, repositories
           config_timezone: Asia/Amman
           repositories_affiliations: owner, collaborator, organization_member
+          debug: yes
           plugin_languages: yes
           plugin_languages_sections: most-used
           plugin_languages_limit: 8
