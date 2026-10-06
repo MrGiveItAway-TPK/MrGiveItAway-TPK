@@ -4,8 +4,8 @@
   "contributed": 31,
   "stars": 6,
   "followers": 19,
-  "commits": 34330,
-  "contributions": 34401,
+  "commits": 35678,
+  "contributions": 34403,
   "since": 2022,
   "languages": [
     {
@@ -163,5 +163,19 @@
       "color": "#438eff",
       "percent": 0.0
     }
-  ]
+  ],
+  "streak": {
+    "active_days": 729,
+    "first": "2022-02-23",
+    "current": {
+      "days": 14,
+      "start": "2026-09-23",
+      "end": "2026-10-06"
+    },
+    "longest": {
+      "days": 248,
+      "start": "2024-12-05",
+      "end": "2025-08-09"
+    }
+  }
 }

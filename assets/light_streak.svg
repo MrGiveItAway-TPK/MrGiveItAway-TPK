@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" width="985px" height="100px" font-size="16px">
+<style>
+@font-face {src: local('Consolas'), local('Consolas Bold'); font-family: 'ConsolasFallback'; font-display: swap; -webkit-size-adjust: 109%; size-adjust: 109%;}
+.key {fill: #953800;} .value {fill: #0a3069;} .cc {fill: #c2cfde;}
+text, tspan {white-space: pre;}
+</style>
+<rect width="985px" height="100px" fill="#f6f8fa" rx="15"/>
+<text x="15" y="30" fill="#24292f">
+<tspan x="15" y="30">- Streak (own + org commits and all GitHub contributions) ——————————————————————————————————————</tspan>
+<tspan x="15" y="50"><tspan class="cc">. </tspan><tspan class="key">Current Streak</tspan>:<tspan class="cc"> ........................................ </tspan><tspan class="value">14 days  (Sep 23, 2026 - Oct 6, 2026)</tspan></tspan>
+<tspan x="15" y="70"><tspan class="cc">. </tspan><tspan class="key">Longest Streak</tspan>:<tspan class="cc"> ........................................ </tspan><tspan class="value">248 days  (Dec 5, 2024 - Aug 9, 2025)</tspan></tspan>
+<tspan x="15" y="90"><tspan class="cc">. </tspan><tspan class="key">Active Days</tspan>:<tspan class="cc"> ....................................................... </tspan><tspan class="value">729  (since Feb 23, 2022)</tspan></tspan>
+</text>
+</svg>
