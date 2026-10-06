@@ -49,25 +49,27 @@ def fetch_stats():
         {"login": USER},
     )["user"]
 
-    repos, stars, cursor = 0, 0, None
-    while True:
-        page = graphql(
-            """query($login: String!, $cursor: String) {
-                 user(login: $login) {
-                   repositories(ownerAffiliations: OWNER, first: 100, after: $cursor) {
-                     totalCount
-                     pageInfo { hasNextPage endCursor }
-                     nodes { stargazerCount }
-                   }
-                 }
-               }""",
-            {"login": USER, "cursor": cursor},
-        )["user"]["repositories"]
-        repos = page["totalCount"]
-        stars += sum(n["stargazerCount"] for n in page["nodes"])
-        if not page["pageInfo"]["hasNextPage"]:
-            break
-        cursor = page["pageInfo"]["endCursor"]
+    own = walk_repos("user", USER, "ownerAffiliations: OWNER, ")
+    orgs = graphql(
+        """query($login: String!) { user(login: $login) { organizations(first: 100) { nodes { login } } } }""",
+        {"login": USER},
+    )["user"]["organizations"]["nodes"]
+    org_repos = [r for org in orgs for r in walk_repos("organization", org["login"])]
+
+    # Language bytes across owned + org repos (forks excluded); only totals leave this script.
+    sizes, colors = {}, {}
+    for repo in own + org_repos:
+        if repo["isFork"]:
+            continue
+        for edge in repo["languages"]["edges"]:
+            name = edge["node"]["name"]
+            sizes[name] = sizes.get(name, 0) + edge["size"]
+            colors[name] = edge["node"]["color"] or "#8b949e"
+    total = sum(sizes.values()) or 1
+    languages = [
+        dict(name=name, color=colors[name], percent=round(100 * size / total, 2))
+        for name, size in sorted(sizes.items(), key=lambda kv: -kv[1])
+    ]
 
     commits = contributions = 0
     since = int(user["createdAt"][:4])
@@ -90,14 +92,43 @@ def fetch_stats():
         contributions += cc["contributionCalendar"]["totalContributions"]
 
     return dict(
-        repos=repos,
+        repos=len(own),
+        org_repos=len(org_repos),
         contributed=user["repositoriesContributedTo"]["totalCount"],
-        stars=stars,
+        stars=sum(r["stargazerCount"] for r in own + org_repos),
         followers=user["followers"]["totalCount"],
         commits=commits,
         contributions=contributions,
         since=since,
+        languages=languages,
     )
+
+
+def walk_repos(owner_type, login, filters=""):
+    """All repos of a user or organization (private included when the token can see them)."""
+    repos, cursor = [], None
+    while True:
+        page = graphql(
+            f"""query($login: String!, $cursor: String) {{
+                 {owner_type}(login: $login) {{
+                   repositories({filters}first: 100, after: $cursor) {{
+                     pageInfo {{ hasNextPage endCursor }}
+                     nodes {{
+                       stargazerCount
+                       isFork
+                       languages(first: 20, orderBy: {{field: SIZE, direction: DESC}}) {{
+                         edges {{ size node {{ name color }} }}
+                       }}
+                     }}
+                   }}
+                 }}
+               }}""",
+            {"login": login, "cursor": cursor},
+        )[owner_type]["repositories"]
+        repos += page["nodes"]
+        if not page["pageInfo"]["hasNextPage"]:
+            return repos
+        cursor = page["pageInfo"]["endCursor"]
 
 
 def load_stats():
@@ -170,15 +201,14 @@ def rows(stats, today):
         kv("YouTube", "@munesbanifawaz"),
         [],
         title("GitHub Stats", "- "),
-        kv2("Repos", f"{n(stats['repos'])} {{Contrib: {stats['contributed']}}}", "Stars", n(stats["stars"])),
+        kv2("Repos", f"{n(stats['repos'])} {{Org: {n(stats.get('org_repos', 0))}}}", "Stars", n(stats["stars"])),
         kv2("Commits", n(stats["commits"]), "Followers", n(stats["followers"])),
-        kv2("Contributions", n(stats["contributions"]), "Since", str(stats["since"])),
+        kv2("Contributions", n(stats["contributions"]), "Contributed", n(stats["contributed"])),
     ]
 
 
-def render(theme, ascii_lines, info_rows):
-    height = 30 + 20 * max(len(ascii_lines), len(info_rows))
-    out = [
+def svg_head(theme, height):
+    return [
         "<?xml version='1.0' encoding='UTF-8'?>",
         f'<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" '
         f'width="985px" height="{height}px" font-size="16px">',
@@ -189,8 +219,12 @@ def render(theme, ascii_lines, info_rows):
         "text, tspan {white-space: pre;}",
         "</style>",
         f'<rect width="985px" height="{height}px" fill="{theme["bg"]}" rx="15"/>',
-        f'<text x="15" y="30" fill="{theme["text"]}">',
     ]
+
+
+def render(theme, ascii_lines, info_rows):
+    height = 30 + 20 * max(len(ascii_lines), len(info_rows))
+    out = svg_head(theme, height) + [f'<text x="15" y="30" fill="{theme["text"]}">']
     for i, line in enumerate(ascii_lines):
         out.append(f'<tspan x="15" y="{30 + 20 * i}">{escape(line)}</tspan>')
     out.append("</text>")
@@ -205,13 +239,50 @@ def render(theme, ascii_lines, info_rows):
     return "\n".join(out) + "\n"
 
 
+def render_languages(theme, languages, top=11, columns=3, col_width=27):
+    shown = languages[:top]
+    rest = round(sum(lang["percent"] for lang in languages[top:]), 2)
+    if rest:
+        shown.append(dict(name="Other", color="#8b949e", percent=rest))
+    per_col = -(-len(shown) // columns)
+    height = 92 + 24 * per_col
+    out = svg_head(theme, height)
+    heading = "- Languages (own + org repos, by code size) "
+    out.append(f'<text x="15" y="30" fill="{theme["text"]}">{escape(heading + "—" * (WIDTH + 38 - len(heading)))}</text>')
+    out.append('<clipPath id="bar"><rect x="15" y="46" width="955" height="12" rx="6"/></clipPath>')
+    out.append('<g clip-path="url(#bar)">')
+    x = 15.0
+    for lang in shown:
+        w = 955 * lang["percent"] / 100
+        out.append(f'<rect x="{x:.2f}" y="46" width="{w + 0.5:.2f}" height="12" fill="{lang["color"]}"/>')
+        x += w
+    out.append("</g>")
+    for i, lang in enumerate(shown):
+        col, row = divmod(i, per_col)
+        tx, ty = 40 + col * 315, 90 + row * 24
+        pct = f'{lang["percent"]:.2f}%'
+        gap = max(1, col_width - len(lang["name"]) - len(pct) - 2)
+        out.append(f'<circle cx="{tx - 14}" cy="{ty - 5}" r="6" fill="{lang["color"]}"/>')
+        out.append(
+            f'<text x="{tx}" y="{ty}"><tspan class="key">{escape(lang["name"])}</tspan>'
+            f'<tspan class="cc"> {"." * gap} </tspan><tspan class="value">{pct}</tspan></text>'
+        )
+    out.append("</svg>")
+    return "\n".join(out) + "\n"
+
+
 def main():
     today = dt.date.today()
-    info_rows = rows(load_stats(), today)
+    stats = load_stats()
+    info_rows = rows(stats, today)
     for name, theme in THEMES.items():
         ascii_lines = (ASSETS / theme["ascii"]).read_text().rstrip("\n").split("\n")
         (ASSETS / name).write_text(render(theme, ascii_lines, info_rows))
         print(f"wrote assets/{name}")
+        if stats.get("languages"):
+            lang_name = name.replace("_mode", "_languages")
+            (ASSETS / lang_name).write_text(render_languages(theme, stats["languages"]))
+            print(f"wrote assets/{lang_name}")
 
 
 if __name__ == "__main__":

@@ -26,6 +26,11 @@
   <img alt="Contribution snake" src="https://raw.githubusercontent.com/MrGiveItAway-TPK/MrGiveItAway-TPK/main/assets/snake.svg">
 </picture>
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/MrGiveItAway-TPK/MrGiveItAway-TPK/main/assets/dark_languages.svg">
+  <img alt="Languages across own and organization repositories" src="https://raw.githubusercontent.com/MrGiveItAway-TPK/MrGiveItAway-TPK/main/assets/light_languages.svg">
+</picture>
+
 ![GitHub metrics](metrics.general.svg)
 
 ![GitHub Streak](https://streak-stats.demolab.com/?user=MrGiveItAway-TPK&theme=dark&hide_border=false)
