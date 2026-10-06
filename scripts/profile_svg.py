@@ -56,14 +56,18 @@ def fetch_stats():
     )["user"]["organizations"]["nodes"]
     org_repos = [r for org in orgs for r in walk_repos("organization", org["login"])]
 
-    # Language bytes across owned + org repos (forks excluded); only totals leave this script.
+    # Language share across owned + org repos (forks excluded); only totals leave this script.
+    # Each repo counts equally (its bytes are normalised to 1), so a few huge repos can't
+    # drown out many smaller ones.
     sizes, colors = {}, {}
     for repo in own + org_repos:
-        if repo["isFork"]:
+        edges = repo["languages"]["edges"]
+        repo_bytes = sum(edge["size"] for edge in edges)
+        if repo["isFork"] or not repo_bytes:
             continue
-        for edge in repo["languages"]["edges"]:
+        for edge in edges:
             name = edge["node"]["name"]
-            sizes[name] = sizes.get(name, 0) + edge["size"]
+            sizes[name] = sizes.get(name, 0) + edge["size"] / repo_bytes
             colors[name] = edge["node"]["color"] or "#8b949e"
     total = sum(sizes.values()) or 1
     languages = [
@@ -247,7 +251,7 @@ def render_languages(theme, languages, top=11, columns=3, col_width=27):
     per_col = -(-len(shown) // columns)
     height = 92 + 24 * per_col
     out = svg_head(theme, height)
-    heading = "- Languages (own + org repos, by code size) "
+    heading = "- Languages (own + org repos, each repo weighted equally) "
     out.append(f'<text x="15" y="30" fill="{theme["text"]}">{escape(heading + "—" * (WIDTH + 38 - len(heading)))}</text>')
     out.append('<clipPath id="bar"><rect x="15" y="46" width="955" height="12" rx="6"/></clipPath>')
     out.append('<g clip-path="url(#bar)">')
