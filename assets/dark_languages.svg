@@ -9,10 +9,10 @@ text, tspan {white-space: pre;}
 <text x="15" y="30" fill="#c9d1d9">- Languages (own + org repos, each repo weighted equally) ————————————————————————————————————————</text>
 <clipPath id="bar"><rect x="15" y="46" width="955" height="12" rx="6"/></clipPath>
 <g clip-path="url(#bar)">
-<rect x="15.00" y="46" width="228.75" height="12" fill="#f1e05a"/>
-<rect x="243.25" y="46" width="158.84" height="12" fill="#e34c26"/>
-<rect x="401.58" y="46" width="149.86" height="12" fill="#3572A5"/>
-<rect x="550.95" y="46" width="126.75" height="12" fill="#89e051"/>
+<rect x="15.00" y="46" width="228.65" height="12" fill="#f1e05a"/>
+<rect x="243.15" y="46" width="158.84" height="12" fill="#e34c26"/>
+<rect x="401.49" y="46" width="149.86" height="12" fill="#3572A5"/>
+<rect x="550.85" y="46" width="126.85" height="12" fill="#89e051"/>
 <rect x="677.20" y="46" width="81.01" height="12" fill="#663399"/>
 <rect x="757.70" y="46" width="64.87" height="12" fill="#4F5D95"/>
 <rect x="822.07" y="46" width="32.02" height="12" fill="#C1F12E"/>
@@ -23,13 +23,13 @@ text, tspan {white-space: pre;}
 <rect x="925.88" y="46" width="44.53" height="12" fill="#8b949e"/>
 </g>
 <circle cx="26" cy="85" r="6" fill="#f1e05a"/>
-<text x="40" y="90"><tspan class="key">JavaScript</tspan><tspan class="cc"> ......... </tspan><tspan class="value">23.90%</tspan></text>
+<text x="40" y="90"><tspan class="key">JavaScript</tspan><tspan class="cc"> ......... </tspan><tspan class="value">23.89%</tspan></text>
 <circle cx="26" cy="109" r="6" fill="#e34c26"/>
 <text x="40" y="114"><tspan class="key">HTML</tspan><tspan class="cc"> ............... </tspan><tspan class="value">16.58%</tspan></text>
 <circle cx="26" cy="133" r="6" fill="#3572A5"/>
 <text x="40" y="138"><tspan class="key">Python</tspan><tspan class="cc"> ............. </tspan><tspan class="value">15.64%</tspan></text>
 <circle cx="26" cy="157" r="6" fill="#89e051"/>
-<text x="40" y="162"><tspan class="key">Shell</tspan><tspan class="cc"> .............. </tspan><tspan class="value">13.22%</tspan></text>
+<text x="40" y="162"><tspan class="key">Shell</tspan><tspan class="cc"> .............. </tspan><tspan class="value">13.23%</tspan></text>
 <circle cx="341" cy="85" r="6" fill="#663399"/>
 <text x="355" y="90"><tspan class="key">CSS</tspan><tspan class="cc"> ................. </tspan><tspan class="value">8.43%</tspan></text>
 <circle cx="341" cy="109" r="6" fill="#4F5D95"/>
