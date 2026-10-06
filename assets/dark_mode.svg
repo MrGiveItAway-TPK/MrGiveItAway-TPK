@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" width="985px" height="530px" font-size="16px">
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" width="985px" height="550px" font-size="16px">
 <style>
 @font-face {src: local('Consolas'), local('Consolas Bold'); font-family: 'ConsolasFallback'; font-display: swap; -webkit-size-adjust: 109%; size-adjust: 109%;}
 .key {fill: #ffa657;} .value {fill: #a5d6ff;} .cc {fill: #616e7f;}
 text, tspan {white-space: pre;}
 </style>
-<rect width="985px" height="530px" fill="#161b22" rx="15"/>
+<rect width="985px" height="550px" fill="#161b22" rx="15"/>
 <text x="15" y="30" fill="#c9d1d9">
 <tspan x="15" y="30"></tspan>
 <tspan x="15" y="50">             '',:;::,'''</tspan>
@@ -51,13 +51,14 @@ text, tspan {white-space: pre;}
 <tspan x="390" y="310"><tspan class="cc">. </tspan><tspan class="key">DevOps</tspan>:<tspan class="cc"> ................. </tspan><tspan class="value">Docker, Helm, ArgoCD, AWS, NGINX</tspan></tspan>
 <tspan x="390" y="330"></tspan>
 <tspan x="390" y="350">- Contact ——————————————————————————————————————————————————</tspan>
-<tspan x="390" y="370"><tspan class="cc">. </tspan><tspan class="key">Email</tspan>:<tspan class="cc"> ........................... </tspan><tspan class="value">m.banifawaz@outlook.com</tspan></tspan>
-<tspan x="390" y="390"><tspan class="cc">. </tspan><tspan class="key">LinkedIn</tspan>:<tspan class="cc"> ............................... </tspan><tspan class="value">munes-bani-fawaz</tspan></tspan>
-<tspan x="390" y="410"><tspan class="cc">. </tspan><tspan class="key">YouTube</tspan>:<tspan class="cc"> ................................. </tspan><tspan class="value">@munesbanifawaz</tspan></tspan>
-<tspan x="390" y="430"></tspan>
-<tspan x="390" y="450">- GitHub Stats —————————————————————————————————————————————</tspan>
-<tspan x="390" y="470"><tspan class="cc">. </tspan><tspan class="key">Repos</tspan>:<tspan class="cc"> ................ </tspan><tspan class="value">117</tspan> | <tspan class="cc">. </tspan><tspan class="key">Stars</tspan>:<tspan class="cc"> ................. </tspan><tspan class="value">6</tspan></tspan>
-<tspan x="390" y="490"><tspan class="cc">. </tspan><tspan class="key">Commits</tspan>:<tspan class="cc"> ........... </tspan><tspan class="value">34,330</tspan> | <tspan class="cc">. </tspan><tspan class="key">Followers</tspan>:<tspan class="cc"> ............ </tspan><tspan class="value">19</tspan></tspan>
-<tspan x="390" y="510"><tspan class="cc">. </tspan><tspan class="key">Contributions</tspan>:<tspan class="cc"> ..... </tspan><tspan class="value">34,401</tspan> | <tspan class="cc">. </tspan><tspan class="key">Contributed</tspan>:<tspan class="cc"> .......... </tspan><tspan class="value">31</tspan></tspan>
+<tspan x="390" y="370"><tspan class="cc">. </tspan><tspan class="key">Portfolio</tspan>:<tspan class="cc"> .......................... </tspan><tspan class="value">mbanifawaz.github.io</tspan></tspan>
+<tspan x="390" y="390"><tspan class="cc">. </tspan><tspan class="key">Email</tspan>:<tspan class="cc"> ........................... </tspan><tspan class="value">m.banifawaz@outlook.com</tspan></tspan>
+<tspan x="390" y="410"><tspan class="cc">. </tspan><tspan class="key">LinkedIn</tspan>:<tspan class="cc"> ............................... </tspan><tspan class="value">munes-bani-fawaz</tspan></tspan>
+<tspan x="390" y="430"><tspan class="cc">. </tspan><tspan class="key">YouTube</tspan>:<tspan class="cc"> ................................. </tspan><tspan class="value">@munesbanifawaz</tspan></tspan>
+<tspan x="390" y="450"></tspan>
+<tspan x="390" y="470">- GitHub Stats —————————————————————————————————————————————</tspan>
+<tspan x="390" y="490"><tspan class="cc">. </tspan><tspan class="key">Repos</tspan>:<tspan class="cc"> ................ </tspan><tspan class="value">117</tspan> | <tspan class="cc">. </tspan><tspan class="key">Stars</tspan>:<tspan class="cc"> ................. </tspan><tspan class="value">6</tspan></tspan>
+<tspan x="390" y="510"><tspan class="cc">. </tspan><tspan class="key">Commits</tspan>:<tspan class="cc"> ........... </tspan><tspan class="value">34,330</tspan> | <tspan class="cc">. </tspan><tspan class="key">Followers</tspan>:<tspan class="cc"> ............ </tspan><tspan class="value">19</tspan></tspan>
+<tspan x="390" y="530"><tspan class="cc">. </tspan><tspan class="key">Contributions</tspan>:<tspan class="cc"> ..... </tspan><tspan class="value">34,401</tspan> | <tspan class="cc">. </tspan><tspan class="key">Contributed</tspan>:<tspan class="cc"> .......... </tspan><tspan class="value">31</tspan></tspan>
 </text>
 </svg>

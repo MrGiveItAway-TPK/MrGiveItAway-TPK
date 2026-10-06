@@ -200,6 +200,7 @@ def rows(stats, today):
         kv("DevOps", "Docker, Helm, ArgoCD, AWS, NGINX"),
         [],
         title("Contact", "- "),
+        kv("Portfolio", "mbanifawaz.github.io"),
         kv("Email", "m.banifawaz@outlook.com"),
         kv("LinkedIn", "munes-bani-fawaz"),
         kv("YouTube", "@munesbanifawaz"),
