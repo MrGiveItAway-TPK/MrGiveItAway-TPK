@@ -33,7 +33,10 @@
 
 ![GitHub metrics](metrics.general.svg)
 
-![GitHub Streak](https://streak-stats.demolab.com/?user=MrGiveItAway-TPK&theme=dark&hide_border=false)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/MrGiveItAway-TPK/MrGiveItAway-TPK/main/assets/dark_streak.svg">
+  <img alt="Commit streak across own and organization repositories" src="https://raw.githubusercontent.com/MrGiveItAway-TPK/MrGiveItAway-TPK/main/assets/light_streak.svg">
+</picture>
 
 ### ✍️ Random Dev Quote
 ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)

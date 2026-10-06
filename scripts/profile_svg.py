@@ -16,6 +16,11 @@ ASSETS = ROOT / "assets"
 USER = os.environ.get("USER_NAME", "MrGiveItAway-TPK")
 CAREER_START = dt.date(2021, 6, 1)  # first engineering role (Extensya)
 WIDTH = 60                          # characters in the right-hand column
+try:
+    from zoneinfo import ZoneInfo
+    LOCAL_TZ = ZoneInfo("Asia/Amman")
+except Exception:  # tzdata missing: Jordan is fixed UTC+3
+    LOCAL_TZ = dt.timezone(dt.timedelta(hours=3))
 
 THEMES = {
     "dark_mode.svg": dict(ascii="ascii_dark.txt", bg="#161b22", text="#c9d1d9", key="#ffa657", value="#a5d6ff", dots="#616e7f"),
@@ -40,6 +45,7 @@ def fetch_stats():
     user = graphql(
         """query($login: String!) {
              user(login: $login) {
+               id
                createdAt
                followers { totalCount }
                repositoriesContributedTo(includeUserRepositories: false,
@@ -49,12 +55,13 @@ def fetch_stats():
         {"login": USER},
     )["user"]
 
-    own = walk_repos("user", USER, "ownerAffiliations: OWNER, ")
+    own = walk_repos("user", USER, user["id"], "ownerAffiliations: OWNER, ")
     orgs = graphql(
         """query($login: String!) { user(login: $login) { organizations(first: 100) { nodes { login } } } }""",
         {"login": USER},
     )["user"]["organizations"]["nodes"]
-    org_repos = [r for org in orgs for r in walk_repos("organization", org["login"])]
+    org_repos = [r for org in orgs for r in walk_repos("organization", org["login"], user["id"])]
+    home_owners = {USER.lower()} | {org["login"].lower() for org in orgs}
 
     # Language share across owned + org repos (forks excluded); only totals leave this script.
     # Each repo counts equally (its bytes are normalised to 1), so a few huge repos can't
@@ -75,7 +82,14 @@ def fetch_stats():
         for name, size in sorted(sizes.items(), key=lambda kv: -kv[1])
     ]
 
-    commits = contributions = 0
+    # Commits: every commit authored by this account on the default branch of each own/org repo
+    # (forks excluded), plus commits credited in other people's repos.
+    commits = sum(r["commits"] for r in own + org_repos if not r["isFork"])
+    contributions = 0
+    active_days = set()  # ISO dates with any activity; only the streak summary is published
+    for repo in own + org_repos:
+        if not repo["isFork"] and repo["commits"]:
+            active_days.update(commit_days(repo["nameWithOwner"], user["id"]))
     since = int(user["createdAt"][:4])
     now = dt.datetime.now(dt.timezone.utc)
     for year in range(since, now.year + 1):
@@ -85,15 +99,28 @@ def fetch_stats():
             """query($login: String!, $from: DateTime!, $to: DateTime!) {
                  user(login: $login) {
                    contributionsCollection(from: $from, to: $to) {
-                     totalCommitContributions
-                     contributionCalendar { totalContributions }
+                     contributionCalendar { totalContributions weeks { contributionDays { date contributionCount } } }
+                     commitContributionsByRepository(maxRepositories: 100) {
+                       repository { owner { login } }
+                       contributions { totalCount }
+                     }
                    }
                  }
                }""",
             {"login": USER, "from": start.isoformat(), "to": end.isoformat()},
         )["user"]["contributionsCollection"]
-        commits += cc["totalCommitContributions"]
+        commits += sum(
+            item["contributions"]["totalCount"]
+            for item in cc["commitContributionsByRepository"]
+            if item["repository"]["owner"]["login"].lower() not in home_owners
+        )
         contributions += cc["contributionCalendar"]["totalContributions"]
+        active_days.update(
+            day["date"]
+            for week in cc["contributionCalendar"]["weeks"]
+            for day in week["contributionDays"]
+            if day["contributionCount"]
+        )
 
     return dict(
         repos=len(own),
@@ -105,21 +132,72 @@ def fetch_stats():
         contributions=contributions,
         since=since,
         languages=languages,
+        streak=summarise_streak(active_days),
     )
 
 
-def walk_repos(owner_type, login, filters=""):
+def commit_days(name_with_owner, author_id):
+    """Local (Amman) dates of every commit by the author on the repo's default branch."""
+    owner, name = name_with_owner.split("/", 1)
+    days, cursor = set(), None
+    while True:
+        history = graphql(
+            """query($owner: String!, $name: String!, $author: ID!, $cursor: String) {
+                 repository(owner: $owner, name: $name) {
+                   defaultBranchRef { target { ... on Commit {
+                     history(author: {id: $author}, first: 100, after: $cursor) {
+                       pageInfo { hasNextPage endCursor }
+                       nodes { authoredDate }
+                     }
+                   } } }
+                 }
+               }""",
+            {"owner": owner, "name": name, "author": author_id, "cursor": cursor},
+        )["repository"]["defaultBranchRef"]["target"]["history"]
+        for node in history["nodes"]:
+            stamp = dt.datetime.fromisoformat(node["authoredDate"].replace("Z", "+00:00"))
+            days.add(stamp.astimezone(LOCAL_TZ).date().isoformat())
+        if not history["pageInfo"]["hasNextPage"]:
+            return days
+        cursor = history["pageInfo"]["endCursor"]
+
+
+def summarise_streak(active_days):
+    days = sorted(dt.date.fromisoformat(d) for d in active_days)
+    if not days:
+        return None
+    longest = (days[0], days[0])
+    run_start = days[0]
+    for prev, day in zip(days, days[1:]):
+        if (day - prev).days != 1:
+            run_start = day
+        if day - run_start > longest[1] - longest[0]:
+            longest = (run_start, day)
+    today = dt.datetime.now(LOCAL_TZ).date()
+    current = None
+    if days[-1] >= today - dt.timedelta(days=1):  # a streak survives until a full day is missed
+        index = len(days) - 1
+        while index and (days[index] - days[index - 1]).days == 1:
+            index -= 1
+        current = (days[index], days[-1])
+    span = lambda r: dict(days=(r[1] - r[0]).days + 1, start=r[0].isoformat(), end=r[1].isoformat()) if r else None
+    return dict(active_days=len(days), first=days[0].isoformat(), current=span(current), longest=span(longest))
+
+
+def walk_repos(owner_type, login, author_id, filters=""):
     """All repos of a user or organization (private included when the token can see them)."""
     repos, cursor = [], None
     while True:
         page = graphql(
-            f"""query($login: String!, $cursor: String) {{
+            f"""query($login: String!, $cursor: String, $author: ID!) {{
                  {owner_type}(login: $login) {{
                    repositories({filters}first: 100, after: $cursor) {{
                      pageInfo {{ hasNextPage endCursor }}
                      nodes {{
+                       nameWithOwner
                        stargazerCount
                        isFork
+                       defaultBranchRef {{ target {{ ... on Commit {{ history(author: {{id: $author}}) {{ totalCount }} }} }} }}
                        languages(first: 20, orderBy: {{field: SIZE, direction: DESC}}) {{
                          edges {{ size node {{ name color }} }}
                        }}
@@ -127,8 +205,11 @@ def walk_repos(owner_type, login, filters=""):
                    }}
                  }}
                }}""",
-            {"login": login, "cursor": cursor},
+            {"login": login, "cursor": cursor, "author": author_id},
         )[owner_type]["repositories"]
+        for node in page["nodes"]:
+            ref = node.pop("defaultBranchRef")
+            node["commits"] = ref["target"]["history"]["totalCount"] if ref else 0
         repos += page["nodes"]
         if not page["pageInfo"]["hasNextPage"]:
             return repos
@@ -276,6 +357,27 @@ def render_languages(theme, languages, top=11, columns=3, col_width=27):
     return "\n".join(out) + "\n"
 
 
+def render_streak(theme, streak, width=96):
+    fmt = lambda iso: dt.date.fromisoformat(iso).strftime("%b %-d, %Y")
+    span = lambda r: f'{r["days"]:,} day{"s" if r["days"] != 1 else ""}  ({fmt(r["start"])} - {fmt(r["end"])})'
+    lines = [
+        kv("Current Streak", span(streak["current"]) if streak["current"] else "0 days", width),
+        kv("Longest Streak", span(streak["longest"]), width),
+        kv("Active Days", f'{streak["active_days"]:,}  (since {fmt(streak["first"])})', width),
+    ]
+    heading = "- Streak (own + org commits and all GitHub contributions) "
+    height = 30 + 20 * len(lines) + 10
+    out = svg_head(theme, height)
+    out.append(f'<text x="15" y="30" fill="{theme["text"]}">')
+    out.append(f'<tspan x="15" y="30">{escape(heading + "—" * (width - len(heading)))}</tspan>')
+    for i, row in enumerate(lines, start=1):
+        spans = "".join(f'<tspan class="{cls}">{escape(t)}</tspan>' if cls else escape(t) for t, cls in row)
+        out.append(f'<tspan x="15" y="{30 + 20 * i}">{spans}</tspan>')
+    out.append("</text>")
+    out.append("</svg>")
+    return "\n".join(out) + "\n"
+
+
 def main():
     today = dt.date.today()
     stats = load_stats()
@@ -284,6 +386,10 @@ def main():
         ascii_lines = (ASSETS / theme["ascii"]).read_text().rstrip("\n").split("\n")
         (ASSETS / name).write_text(render(theme, ascii_lines, info_rows))
         print(f"wrote assets/{name}")
+        if stats.get("streak"):
+            streak_name = name.replace("_mode", "_streak")
+            (ASSETS / streak_name).write_text(render_streak(theme, stats["streak"]))
+            print(f"wrote assets/{streak_name}")
         if stats.get("languages"):
             lang_name = name.replace("_mode", "_languages")
             (ASSETS / lang_name).write_text(render_languages(theme, stats["languages"]))
