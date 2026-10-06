@@ -1,9 +1,167 @@
 {
-  "repos": 52,
+  "repos": 51,
+  "org_repos": 66,
   "contributed": 31,
-  "stars": 5,
+  "stars": 6,
   "followers": 19,
-  "commits": 34327,
+  "commits": 34328,
   "contributions": 34399,
-  "since": 2022
+  "since": 2022,
+  "languages": [
+    {
+      "name": "C++",
+      "color": "#f34b7d",
+      "percent": 68.93
+    },
+    {
+      "name": "C#",
+      "color": "#7355dd",
+      "percent": 9.68
+    },
+    {
+      "name": "C",
+      "color": "#555555",
+      "percent": 6.19
+    },
+    {
+      "name": "Python",
+      "color": "#3572A5",
+      "percent": 4.93
+    },
+    {
+      "name": "JavaScript",
+      "color": "#f1e05a",
+      "percent": 4.26
+    },
+    {
+      "name": "HTML",
+      "color": "#e34c26",
+      "percent": 1.52
+    },
+    {
+      "name": "Dart",
+      "color": "#00B4AB",
+      "percent": 0.67
+    },
+    {
+      "name": "TypeScript",
+      "color": "#3178c6",
+      "percent": 0.64
+    },
+    {
+      "name": "ASP.NET",
+      "color": "#9400ff",
+      "percent": 0.61
+    },
+    {
+      "name": "CSS",
+      "color": "#663399",
+      "percent": 0.58
+    },
+    {
+      "name": "Kotlin",
+      "color": "#A97BFF",
+      "percent": 0.49
+    },
+    {
+      "name": "Shell",
+      "color": "#89e051",
+      "percent": 0.46
+    },
+    {
+      "name": "SCSS",
+      "color": "#c6538c",
+      "percent": 0.29
+    },
+    {
+      "name": "PHP",
+      "color": "#4F5D95",
+      "percent": 0.23
+    },
+    {
+      "name": "Vue",
+      "color": "#41b883",
+      "percent": 0.18
+    },
+    {
+      "name": "Blade",
+      "color": "#f7523f",
+      "percent": 0.09
+    },
+    {
+      "name": "ShaderLab",
+      "color": "#222c37",
+      "percent": 0.07
+    },
+    {
+      "name": "Dockerfile",
+      "color": "#384d54",
+      "percent": 0.05
+    },
+    {
+      "name": "Java",
+      "color": "#b07219",
+      "percent": 0.04
+    },
+    {
+      "name": "Batchfile",
+      "color": "#C1F12E",
+      "percent": 0.03
+    },
+    {
+      "name": "HLSL",
+      "color": "#aace60",
+      "percent": 0.02
+    },
+    {
+      "name": "CMake",
+      "color": "#DA3434",
+      "percent": 0.02
+    },
+    {
+      "name": "Less",
+      "color": "#1d365d",
+      "percent": 0.01
+    },
+    {
+      "name": "Hack",
+      "color": "#878787",
+      "percent": 0.01
+    },
+    {
+      "name": "PowerShell",
+      "color": "#012456",
+      "percent": 0.0
+    },
+    {
+      "name": "Swift",
+      "color": "#F05138",
+      "percent": 0.0
+    },
+    {
+      "name": "Makefile",
+      "color": "#427819",
+      "percent": 0.0
+    },
+    {
+      "name": "VBScript",
+      "color": "#15dcdc",
+      "percent": 0.0
+    },
+    {
+      "name": "Jinja",
+      "color": "#a52a22",
+      "percent": 0.0
+    },
+    {
+      "name": "Objective-C",
+      "color": "#438eff",
+      "percent": 0.0
+    },
+    {
+      "name": "Procfile",
+      "color": "#3B2F63",
+      "percent": 0.0
+    }
+  ]
 }

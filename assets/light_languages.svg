@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" width="985px" height="188px" font-size="16px">
+<style>
+@font-face {src: local('Consolas'), local('Consolas Bold'); font-family: 'ConsolasFallback'; font-display: swap; -webkit-size-adjust: 109%; size-adjust: 109%;}
+.key {fill: #953800;} .value {fill: #0a3069;} .cc {fill: #c2cfde;}
+text, tspan {white-space: pre;}
+</style>
+<rect width="985px" height="188px" fill="#f6f8fa" rx="15"/>
+<text x="15" y="30" fill="#24292f">- Languages (own + org repos, by code size) ——————————————————————————————————————————————————————</text>
+<clipPath id="bar"><rect x="15" y="46" width="955" height="12" rx="6"/></clipPath>
+<g clip-path="url(#bar)">
+<rect x="15.00" y="46" width="658.78" height="12" fill="#f34b7d"/>
+<rect x="673.28" y="46" width="92.94" height="12" fill="#7355dd"/>
+<rect x="765.73" y="46" width="59.61" height="12" fill="#555555"/>
+<rect x="824.84" y="46" width="47.58" height="12" fill="#3572A5"/>
+<rect x="871.92" y="46" width="41.18" height="12" fill="#f1e05a"/>
+<rect x="912.60" y="46" width="15.02" height="12" fill="#e34c26"/>
+<rect x="927.12" y="46" width="6.90" height="12" fill="#00B4AB"/>
+<rect x="933.52" y="46" width="6.61" height="12" fill="#3178c6"/>
+<rect x="939.63" y="46" width="6.33" height="12" fill="#9400ff"/>
+<rect x="945.46" y="46" width="6.04" height="12" fill="#663399"/>
+<rect x="951.00" y="46" width="5.18" height="12" fill="#A97BFF"/>
+<rect x="955.67" y="46" width="14.82" height="12" fill="#8b949e"/>
+</g>
+<circle cx="26" cy="85" r="6" fill="#f34b7d"/>
+<text x="40" y="90"><tspan class="key">C++</tspan><tspan class="cc"> ................ </tspan><tspan class="value">68.93%</tspan></text>
+<circle cx="26" cy="109" r="6" fill="#7355dd"/>
+<text x="40" y="114"><tspan class="key">C#</tspan><tspan class="cc"> .................. </tspan><tspan class="value">9.68%</tspan></text>
+<circle cx="26" cy="133" r="6" fill="#555555"/>
+<text x="40" y="138"><tspan class="key">C</tspan><tspan class="cc"> ................... </tspan><tspan class="value">6.19%</tspan></text>
+<circle cx="26" cy="157" r="6" fill="#3572A5"/>
+<text x="40" y="162"><tspan class="key">Python</tspan><tspan class="cc"> .............. </tspan><tspan class="value">4.93%</tspan></text>
+<circle cx="341" cy="85" r="6" fill="#f1e05a"/>
+<text x="355" y="90"><tspan class="key">JavaScript</tspan><tspan class="cc"> .......... </tspan><tspan class="value">4.26%</tspan></text>
+<circle cx="341" cy="109" r="6" fill="#e34c26"/>
+<text x="355" y="114"><tspan class="key">HTML</tspan><tspan class="cc"> ................ </tspan><tspan class="value">1.52%</tspan></text>
+<circle cx="341" cy="133" r="6" fill="#00B4AB"/>
+<text x="355" y="138"><tspan class="key">Dart</tspan><tspan class="cc"> ................ </tspan><tspan class="value">0.67%</tspan></text>
+<circle cx="341" cy="157" r="6" fill="#3178c6"/>
+<text x="355" y="162"><tspan class="key">TypeScript</tspan><tspan class="cc"> .......... </tspan><tspan class="value">0.64%</tspan></text>
+<circle cx="656" cy="85" r="6" fill="#9400ff"/>
+<text x="670" y="90"><tspan class="key">ASP.NET</tspan><tspan class="cc"> ............. </tspan><tspan class="value">0.61%</tspan></text>
+<circle cx="656" cy="109" r="6" fill="#663399"/>
+<text x="670" y="114"><tspan class="key">CSS</tspan><tspan class="cc"> ................. </tspan><tspan class="value">0.58%</tspan></text>
+<circle cx="656" cy="133" r="6" fill="#A97BFF"/>
+<text x="670" y="138"><tspan class="key">Kotlin</tspan><tspan class="cc"> .............. </tspan><tspan class="value">0.49%</tspan></text>
+<circle cx="656" cy="157" r="6" fill="#8b949e"/>
+<text x="670" y="162"><tspan class="key">Other</tspan><tspan class="cc"> ............... </tspan><tspan class="value">1.50%</tspan></text>
+</svg>
