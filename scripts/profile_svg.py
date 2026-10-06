@@ -201,7 +201,7 @@ def rows(stats, today):
         kv("YouTube", "@munesbanifawaz"),
         [],
         title("GitHub Stats", "- "),
-        kv2("Repos", f"{n(stats['repos'])} {{Org: {n(stats.get('org_repos', 0))}}}", "Stars", n(stats["stars"])),
+        kv2("Repos", n(stats["repos"] + stats.get("org_repos", 0)), "Stars", n(stats["stars"])),
         kv2("Commits", n(stats["commits"]), "Followers", n(stats["followers"])),
         kv2("Contributions", n(stats["contributions"]), "Contributed", n(stats["contributed"])),
     ]

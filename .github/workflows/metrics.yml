@@ -59,7 +59,7 @@ jobs:
           filename: metrics.general.svg
           token: ${{ secrets.METRICS_TOKEN }}
           user: MrGiveItAway-TPK
-          base: header, activity, community, repositories
+          base: header, activity, community
           config_timezone: Asia/Amman
           repositories_affiliations: owner
           plugin_notable: yes
