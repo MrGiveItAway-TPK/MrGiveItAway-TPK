@@ -8,7 +8,7 @@ text, tspan {white-space: pre;}
 <rect width="985px" height="100px" fill="#f6f8fa" rx="15"/>
 <text x="15" y="30" fill="#24292f">
 <tspan x="15" y="30">- Streak (own + org commits and all GitHub contributions) ——————————————————————————————————————</tspan>
-<tspan x="15" y="50"><tspan class="cc">. </tspan><tspan class="key">Current Streak</tspan>:<tspan class="cc"> ........................................ </tspan><tspan class="value">14 days  (Sep 23, 2026 - Oct 6, 2026)</tspan></tspan>
+<tspan x="15" y="50"><tspan class="cc">. </tspan><tspan class="key">Current Streak</tspan>:<tspan class="cc"> ....................................................................... </tspan><tspan class="value">0 days</tspan></tspan>
 <tspan x="15" y="70"><tspan class="cc">. </tspan><tspan class="key">Longest Streak</tspan>:<tspan class="cc"> ........................................ </tspan><tspan class="value">248 days  (Dec 5, 2024 - Aug 9, 2025)</tspan></tspan>
 <tspan x="15" y="90"><tspan class="cc">. </tspan><tspan class="key">Active Days</tspan>:<tspan class="cc"> ....................................................... </tspan><tspan class="value">729  (since Feb 23, 2022)</tspan></tspan>
 </text>
