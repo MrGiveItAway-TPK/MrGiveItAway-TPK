@@ -1,67 +1,67 @@
 {
   "repos": 51,
-  "org_repos": 66,
-  "contributed": 31,
+  "org_repos": 67,
+  "contributed": 32,
   "stars": 6,
   "followers": 19,
-  "commits": 35699,
-  "contributions": 34424,
+  "commits": 35702,
+  "contributions": 34427,
   "since": 2022,
   "languages": [
     {
       "name": "JavaScript",
       "color": "#f1e05a",
-      "percent": 23.89
+      "percent": 23.94
     },
     {
       "name": "HTML",
       "color": "#e34c26",
-      "percent": 16.58
+      "percent": 16.43
     },
     {
       "name": "Python",
       "color": "#3572A5",
-      "percent": 15.64
+      "percent": 16.08
     },
     {
       "name": "Shell",
       "color": "#89e051",
-      "percent": 13.23
+      "percent": 13.13
     },
     {
       "name": "CSS",
       "color": "#663399",
-      "percent": 8.43
+      "percent": 8.42
     },
     {
       "name": "PHP",
       "color": "#4F5D95",
-      "percent": 6.74
+      "percent": 6.68
     },
     {
       "name": "Batchfile",
       "color": "#C1F12E",
-      "percent": 3.3
+      "percent": 3.27
     },
     {
       "name": "TypeScript",
       "color": "#3178c6",
-      "percent": 2.57
+      "percent": 2.55
     },
     {
       "name": "Dockerfile",
       "color": "#384d54",
-      "percent": 2.34
+      "percent": 2.31
     },
     {
       "name": "Kotlin",
       "color": "#A97BFF",
-      "percent": 1.82
+      "percent": 1.8
     },
     {
       "name": "C#",
       "color": "#7355dd",
-      "percent": 0.84
+      "percent": 0.83
     },
     {
       "name": "C++",
@@ -71,12 +71,12 @@
     {
       "name": "Dart",
       "color": "#00B4AB",
-      "percent": 0.65
+      "percent": 0.64
     },
     {
       "name": "Vue",
       "color": "#41b883",
-      "percent": 0.62
+      "percent": 0.61
     },
     {
       "name": "Java",
