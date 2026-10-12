@@ -11,25 +11,25 @@ text, tspan {white-space: pre;}
 <g clip-path="url(#bar)">
 <rect x="15.00" y="46" width="228.55" height="12" fill="#f1e05a"/>
 <rect x="243.05" y="46" width="157.41" height="12" fill="#e34c26"/>
-<rect x="399.96" y="46" width="154.06" height="12" fill="#3572A5"/>
-<rect x="553.52" y="46" width="125.89" height="12" fill="#89e051"/>
-<rect x="678.92" y="46" width="80.91" height="12" fill="#663399"/>
-<rect x="759.33" y="46" width="64.29" height="12" fill="#4F5D95"/>
-<rect x="823.12" y="46" width="31.73" height="12" fill="#C1F12E"/>
-<rect x="854.35" y="46" width="24.85" height="12" fill="#3178c6"/>
-<rect x="878.70" y="46" width="22.56" height="12" fill="#384d54"/>
-<rect x="900.76" y="46" width="18.17" height="12" fill="#A97BFF"/>
-<rect x="918.43" y="46" width="8.43" height="12" fill="#7355dd"/>
-<rect x="926.36" y="46" width="44.33" height="12" fill="#8b949e"/>
+<rect x="399.96" y="46" width="154.26" height="12" fill="#3572A5"/>
+<rect x="553.72" y="46" width="125.80" height="12" fill="#89e051"/>
+<rect x="679.01" y="46" width="80.91" height="12" fill="#663399"/>
+<rect x="759.42" y="46" width="64.29" height="12" fill="#4F5D95"/>
+<rect x="823.22" y="46" width="31.73" height="12" fill="#C1F12E"/>
+<rect x="854.45" y="46" width="24.85" height="12" fill="#3178c6"/>
+<rect x="878.80" y="46" width="22.56" height="12" fill="#384d54"/>
+<rect x="900.86" y="46" width="18.17" height="12" fill="#A97BFF"/>
+<rect x="918.53" y="46" width="8.43" height="12" fill="#7355dd"/>
+<rect x="926.45" y="46" width="44.33" height="12" fill="#8b949e"/>
 </g>
 <circle cx="26" cy="85" r="6" fill="#f1e05a"/>
 <text x="40" y="90"><tspan class="key">JavaScript</tspan><tspan class="cc"> ......... </tspan><tspan class="value">23.88%</tspan></text>
 <circle cx="26" cy="109" r="6" fill="#e34c26"/>
 <text x="40" y="114"><tspan class="key">HTML</tspan><tspan class="cc"> ............... </tspan><tspan class="value">16.43%</tspan></text>
 <circle cx="26" cy="133" r="6" fill="#3572A5"/>
-<text x="40" y="138"><tspan class="key">Python</tspan><tspan class="cc"> ............. </tspan><tspan class="value">16.08%</tspan></text>
+<text x="40" y="138"><tspan class="key">Python</tspan><tspan class="cc"> ............. </tspan><tspan class="value">16.10%</tspan></text>
 <circle cx="26" cy="157" r="6" fill="#89e051"/>
-<text x="40" y="162"><tspan class="key">Shell</tspan><tspan class="cc"> .............. </tspan><tspan class="value">13.13%</tspan></text>
+<text x="40" y="162"><tspan class="key">Shell</tspan><tspan class="cc"> .............. </tspan><tspan class="value">13.12%</tspan></text>
 <circle cx="341" cy="85" r="6" fill="#663399"/>
 <text x="355" y="90"><tspan class="key">CSS</tspan><tspan class="cc"> ................. </tspan><tspan class="value">8.42%</tspan></text>
 <circle cx="341" cy="109" r="6" fill="#4F5D95"/>
