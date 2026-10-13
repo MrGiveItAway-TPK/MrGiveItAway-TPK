@@ -9,9 +9,9 @@ text, tspan {white-space: pre;}
 <text x="15" y="30" fill="#c9d1d9">- Languages (own + org repos, each repo weighted equally) ————————————————————————————————————————</text>
 <clipPath id="bar"><rect x="15" y="46" width="955" height="12" rx="6"/></clipPath>
 <g clip-path="url(#bar)">
-<rect x="15.00" y="46" width="228.55" height="12" fill="#f1e05a"/>
-<rect x="243.05" y="46" width="157.41" height="12" fill="#e34c26"/>
-<rect x="399.96" y="46" width="154.06" height="12" fill="#3572A5"/>
+<rect x="15.00" y="46" width="228.46" height="12" fill="#f1e05a"/>
+<rect x="242.96" y="46" width="157.41" height="12" fill="#e34c26"/>
+<rect x="399.87" y="46" width="154.16" height="12" fill="#3572A5"/>
 <rect x="553.52" y="46" width="125.99" height="12" fill="#89e051"/>
 <rect x="679.01" y="46" width="80.91" height="12" fill="#663399"/>
 <rect x="759.42" y="46" width="64.29" height="12" fill="#4F5D95"/>
@@ -23,11 +23,11 @@ text, tspan {white-space: pre;}
 <rect x="926.45" y="46" width="44.33" height="12" fill="#8b949e"/>
 </g>
 <circle cx="26" cy="85" r="6" fill="#f1e05a"/>
-<text x="40" y="90"><tspan class="key">JavaScript</tspan><tspan class="cc"> ......... </tspan><tspan class="value">23.88%</tspan></text>
+<text x="40" y="90"><tspan class="key">JavaScript</tspan><tspan class="cc"> ......... </tspan><tspan class="value">23.87%</tspan></text>
 <circle cx="26" cy="109" r="6" fill="#e34c26"/>
 <text x="40" y="114"><tspan class="key">HTML</tspan><tspan class="cc"> ............... </tspan><tspan class="value">16.43%</tspan></text>
 <circle cx="26" cy="133" r="6" fill="#3572A5"/>
-<text x="40" y="138"><tspan class="key">Python</tspan><tspan class="cc"> ............. </tspan><tspan class="value">16.08%</tspan></text>
+<text x="40" y="138"><tspan class="key">Python</tspan><tspan class="cc"> ............. </tspan><tspan class="value">16.09%</tspan></text>
 <circle cx="26" cy="157" r="6" fill="#89e051"/>
 <text x="40" y="162"><tspan class="key">Shell</tspan><tspan class="cc"> .............. </tspan><tspan class="value">13.14%</tspan></text>
 <circle cx="341" cy="85" r="6" fill="#663399"/>
