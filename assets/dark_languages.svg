@@ -9,23 +9,23 @@ text, tspan {white-space: pre;}
 <text x="15" y="30" fill="#c9d1d9">- Languages (own + org repos, each repo weighted equally) ————————————————————————————————————————</text>
 <clipPath id="bar"><rect x="15" y="46" width="955" height="12" rx="6"/></clipPath>
 <g clip-path="url(#bar)">
-<rect x="15.00" y="46" width="227.60" height="12" fill="#f1e05a"/>
-<rect x="242.10" y="46" width="157.60" height="12" fill="#e34c26"/>
-<rect x="399.20" y="46" width="155.21" height="12" fill="#3572A5"/>
-<rect x="553.91" y="46" width="125.80" height="12" fill="#89e051"/>
-<rect x="679.20" y="46" width="80.82" height="12" fill="#663399"/>
-<rect x="759.52" y="46" width="64.29" height="12" fill="#4F5D95"/>
-<rect x="823.31" y="46" width="31.73" height="12" fill="#C1F12E"/>
-<rect x="854.54" y="46" width="24.85" height="12" fill="#3178c6"/>
-<rect x="878.89" y="46" width="22.56" height="12" fill="#384d54"/>
-<rect x="900.95" y="46" width="17.98" height="12" fill="#A97BFF"/>
-<rect x="918.43" y="46" width="8.43" height="12" fill="#7355dd"/>
-<rect x="926.36" y="46" width="44.33" height="12" fill="#8b949e"/>
+<rect x="15.00" y="46" width="227.69" height="12" fill="#f1e05a"/>
+<rect x="242.19" y="46" width="157.69" height="12" fill="#e34c26"/>
+<rect x="399.39" y="46" width="155.21" height="12" fill="#3572A5"/>
+<rect x="554.10" y="46" width="125.80" height="12" fill="#89e051"/>
+<rect x="679.39" y="46" width="80.82" height="12" fill="#663399"/>
+<rect x="759.71" y="46" width="64.29" height="12" fill="#4F5D95"/>
+<rect x="823.50" y="46" width="31.73" height="12" fill="#C1F12E"/>
+<rect x="854.73" y="46" width="24.85" height="12" fill="#3178c6"/>
+<rect x="879.08" y="46" width="22.56" height="12" fill="#384d54"/>
+<rect x="901.14" y="46" width="17.88" height="12" fill="#A97BFF"/>
+<rect x="918.53" y="46" width="8.43" height="12" fill="#7355dd"/>
+<rect x="926.45" y="46" width="44.33" height="12" fill="#8b949e"/>
 </g>
 <circle cx="26" cy="85" r="6" fill="#f1e05a"/>
-<text x="40" y="90"><tspan class="key">JavaScript</tspan><tspan class="cc"> ......... </tspan><tspan class="value">23.78%</tspan></text>
+<text x="40" y="90"><tspan class="key">JavaScript</tspan><tspan class="cc"> ......... </tspan><tspan class="value">23.79%</tspan></text>
 <circle cx="26" cy="109" r="6" fill="#e34c26"/>
-<text x="40" y="114"><tspan class="key">HTML</tspan><tspan class="cc"> ............... </tspan><tspan class="value">16.45%</tspan></text>
+<text x="40" y="114"><tspan class="key">HTML</tspan><tspan class="cc"> ............... </tspan><tspan class="value">16.46%</tspan></text>
 <circle cx="26" cy="133" r="6" fill="#3572A5"/>
 <text x="40" y="138"><tspan class="key">Python</tspan><tspan class="cc"> ............. </tspan><tspan class="value">16.20%</tspan></text>
 <circle cx="26" cy="157" r="6" fill="#89e051"/>
@@ -41,7 +41,7 @@ text, tspan {white-space: pre;}
 <circle cx="656" cy="85" r="6" fill="#384d54"/>
 <text x="670" y="90"><tspan class="key">Dockerfile</tspan><tspan class="cc"> .......... </tspan><tspan class="value">2.31%</tspan></text>
 <circle cx="656" cy="109" r="6" fill="#A97BFF"/>
-<text x="670" y="114"><tspan class="key">Kotlin</tspan><tspan class="cc"> .............. </tspan><tspan class="value">1.83%</tspan></text>
+<text x="670" y="114"><tspan class="key">Kotlin</tspan><tspan class="cc"> .............. </tspan><tspan class="value">1.82%</tspan></text>
 <circle cx="656" cy="133" r="6" fill="#7355dd"/>
 <text x="670" y="138"><tspan class="key">C#</tspan><tspan class="cc"> .................. </tspan><tspan class="value">0.83%</tspan></text>
 <circle cx="656" cy="157" r="6" fill="#8b949e"/>
