@@ -13,14 +13,14 @@ text, tspan {white-space: pre;}
 <rect x="242.29" y="46" width="157.69" height="12" fill="#e34c26"/>
 <rect x="399.48" y="46" width="154.35" height="12" fill="#3572A5"/>
 <rect x="553.33" y="46" width="125.80" height="12" fill="#89e051"/>
-<rect x="678.63" y="46" width="80.82" height="12" fill="#663399"/>
-<rect x="758.95" y="46" width="64.29" height="12" fill="#4F5D95"/>
-<rect x="822.74" y="46" width="31.73" height="12" fill="#C1F12E"/>
-<rect x="853.97" y="46" width="24.85" height="12" fill="#3178c6"/>
-<rect x="878.32" y="46" width="22.56" height="12" fill="#384d54"/>
-<rect x="900.38" y="46" width="18.74" height="12" fill="#A97BFF"/>
-<rect x="918.62" y="46" width="8.43" height="12" fill="#7355dd"/>
-<rect x="926.55" y="46" width="44.33" height="12" fill="#8b949e"/>
+<rect x="678.63" y="46" width="80.72" height="12" fill="#663399"/>
+<rect x="758.85" y="46" width="64.29" height="12" fill="#4F5D95"/>
+<rect x="822.64" y="46" width="31.73" height="12" fill="#C1F12E"/>
+<rect x="853.87" y="46" width="24.85" height="12" fill="#3178c6"/>
+<rect x="878.22" y="46" width="22.56" height="12" fill="#384d54"/>
+<rect x="900.29" y="46" width="18.74" height="12" fill="#A97BFF"/>
+<rect x="918.53" y="46" width="8.43" height="12" fill="#7355dd"/>
+<rect x="926.45" y="46" width="44.33" height="12" fill="#8b949e"/>
 </g>
 <circle cx="26" cy="85" r="6" fill="#f1e05a"/>
 <text x="40" y="90"><tspan class="key">JavaScript</tspan><tspan class="cc"> ......... </tspan><tspan class="value">23.80%</tspan></text>
@@ -31,7 +31,7 @@ text, tspan {white-space: pre;}
 <circle cx="26" cy="157" r="6" fill="#89e051"/>
 <text x="40" y="162"><tspan class="key">Shell</tspan><tspan class="cc"> .............. </tspan><tspan class="value">13.12%</tspan></text>
 <circle cx="341" cy="85" r="6" fill="#663399"/>
-<text x="355" y="90"><tspan class="key">CSS</tspan><tspan class="cc"> ................. </tspan><tspan class="value">8.41%</tspan></text>
+<text x="355" y="90"><tspan class="key">CSS</tspan><tspan class="cc"> ................. </tspan><tspan class="value">8.40%</tspan></text>
 <circle cx="341" cy="109" r="6" fill="#4F5D95"/>
 <text x="355" y="114"><tspan class="key">PHP</tspan><tspan class="cc"> ................. </tspan><tspan class="value">6.68%</tspan></text>
 <circle cx="341" cy="133" r="6" fill="#C1F12E"/>
