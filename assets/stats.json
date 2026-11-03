@@ -1,112 +1,112 @@
 {
   "repos": 52,
-  "org_repos": 67,
-  "contributed": 29,
+  "org_repos": 69,
+  "contributed": 31,
   "stars": 6,
   "followers": 19,
-  "commits": 36220,
-  "contributions": 34896,
+  "commits": 36236,
+  "contributions": 34912,
   "since": 2022,
   "languages": [
     {
       "name": "JavaScript",
       "color": "#f1e05a",
-      "percent": 23.85
+      "percent": 23.78
     },
     {
       "name": "HTML",
       "color": "#e34c26",
-      "percent": 16.48
+      "percent": 17.48
     },
     {
       "name": "Python",
       "color": "#3572A5",
-      "percent": 16.05
+      "percent": 15.82
     },
     {
       "name": "Shell",
       "color": "#89e051",
-      "percent": 13.12
+      "percent": 12.89
     },
     {
       "name": "CSS",
       "color": "#663399",
-      "percent": 8.4
+      "percent": 8.35
     },
     {
       "name": "PHP",
       "color": "#4F5D95",
-      "percent": 6.68
+      "percent": 6.55
     },
     {
       "name": "Batchfile",
       "color": "#C1F12E",
-      "percent": 3.27
+      "percent": 3.21
     },
     {
       "name": "TypeScript",
       "color": "#3178c6",
-      "percent": 2.55
+      "percent": 2.5
     },
     {
       "name": "Dockerfile",
       "color": "#384d54",
-      "percent": 2.31
+      "percent": 2.27
     },
     {
       "name": "Kotlin",
       "color": "#A97BFF",
-      "percent": 1.89
+      "percent": 1.86
     },
     {
       "name": "C#",
       "color": "#7355dd",
-      "percent": 0.83
+      "percent": 0.82
     },
     {
       "name": "C++",
       "color": "#f34b7d",
-      "percent": 0.81
+      "percent": 0.79
     },
     {
       "name": "Dart",
       "color": "#00B4AB",
-      "percent": 0.64
+      "percent": 0.63
     },
     {
       "name": "Vue",
       "color": "#41b883",
-      "percent": 0.61
+      "percent": 0.6
     },
     {
       "name": "Java",
       "color": "#b07219",
-      "percent": 0.58
+      "percent": 0.57
     },
     {
       "name": "Blade",
       "color": "#f7523f",
-      "percent": 0.49
+      "percent": 0.48
     },
     {
       "name": "SCSS",
       "color": "#c6538c",
-      "percent": 0.43
+      "percent": 0.42
     },
     {
       "name": "Hack",
       "color": "#878787",
-      "percent": 0.33
+      "percent": 0.32
     },
     {
       "name": "PowerShell",
       "color": "#012456",
-      "percent": 0.22
+      "percent": 0.21
     },
     {
       "name": "ShaderLab",
       "color": "#222c37",
-      "percent": 0.21
+      "percent": 0.2
     },
     {
       "name": "VBScript",
@@ -165,12 +165,12 @@
     }
   ],
   "streak": {
-    "active_days": 749,
+    "active_days": 751,
     "first": "2022-02-23",
     "current": {
-      "days": 14,
+      "days": 16,
       "start": "2026-10-19",
-      "end": "2026-11-01"
+      "end": "2026-11-03"
     },
     "longest": {
       "days": 248,
