@@ -4,19 +4,19 @@
   "contributed": 31,
   "stars": 6,
   "followers": 19,
-  "commits": 36257,
-  "contributions": 34931,
+  "commits": 36261,
+  "contributions": 34935,
   "since": 2022,
   "languages": [
     {
       "name": "JavaScript",
       "color": "#f1e05a",
-      "percent": 23.7
+      "percent": 23.68
     },
     {
       "name": "HTML",
       "color": "#e34c26",
-      "percent": 17.62
+      "percent": 17.65
     },
     {
       "name": "Python",
@@ -165,9 +165,13 @@
     }
   ],
   "streak": {
-    "active_days": 752,
+    "active_days": 753,
     "first": "2022-02-23",
-    "current": null,
+    "current": {
+      "days": 1,
+      "start": "2026-11-06",
+      "end": "2026-11-06"
+    },
     "longest": {
       "days": 248,
       "start": "2024-12-05",
