@@ -167,11 +167,7 @@
   "streak": {
     "active_days": 752,
     "first": "2022-02-23",
-    "current": {
-      "days": 17,
-      "start": "2026-10-19",
-      "end": "2026-11-04"
-    },
+    "current": null,
     "longest": {
       "days": 248,
       "start": "2024-12-05",
