@@ -4,24 +4,24 @@
   "contributed": 30,
   "stars": 6,
   "followers": 18,
-  "commits": 36373,
-  "contributions": 35047,
+  "commits": 36405,
+  "contributions": 35079,
   "since": 2022,
   "languages": [
     {
       "name": "JavaScript",
       "color": "#f1e05a",
-      "percent": 23.52
+      "percent": 23.65
     },
     {
       "name": "HTML",
       "color": "#e34c26",
-      "percent": 17.7
+      "percent": 17.6
     },
     {
       "name": "Python",
       "color": "#3572A5",
-      "percent": 15.92
+      "percent": 15.9
     },
     {
       "name": "Shell",
@@ -56,7 +56,7 @@
     {
       "name": "Kotlin",
       "color": "#A97BFF",
-      "percent": 1.89
+      "percent": 1.88
     },
     {
       "name": "C#",
@@ -165,12 +165,12 @@
     }
   ],
   "streak": {
-    "active_days": 757,
+    "active_days": 758,
     "first": "2022-02-23",
     "current": {
-      "days": 4,
+      "days": 5,
       "start": "2026-11-08",
-      "end": "2026-11-11"
+      "end": "2026-11-12"
     },
     "longest": {
       "days": 248,
